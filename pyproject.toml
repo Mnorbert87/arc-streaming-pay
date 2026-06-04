@@ -1,0 +1,13 @@
+[project]
+name = "arc-streaming-pay"
+version = "0.1.0"
+description = "Recurring and scheduled USDC payments on Arc: pay a fixed amount at a fixed interval, with optional end date and payment cap. Catch-up safe, never double-pays. MCP tools."
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.28.1", "mcp[cli]>=1.27.1", "eth-account>=0.13.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
